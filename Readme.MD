@@ -59,6 +59,7 @@ The messages stay in the queue until they are handled by a consumer. <br>
 The consumer handles the message.
 <h4> Setup RabbitMQ </h4>
 Follow the instructions given here: https://www.rabbitmq.com/download.html
+
 ### Using RabbitMQ with Node(AMQPLIB library)
 <h4> A simple program </h4>
 _Refer code of send.js and recive.js for a detailed explanation_
@@ -81,7 +82,7 @@ ii. Fanout Exchange (Broadcasting)
 The fanout copies and routes a received message to all queues that are bound to it regardless of routing keys or pattern matching as with direct and topic exchanges. Keys provided will simply be ignored.<br>
 iii.Topic Exchange
 <div align="center">
-<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/topic-exchange.png" alt="RabbitMQ Tutorial" width="270" height="300"/>
+<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/topic-exchange%20(1).png" alt="RabbitMQ Tutorial" width="270" height="300"/>
 <br>
 </div>
 Topic exchanges route messages to queues based on wildcard matches between the routing key and something called the routing pattern specified by the queue binding. Messages are routed to one or many queues based on a matching between a message routing key and this pattern. <br>
