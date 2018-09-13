@@ -83,17 +83,17 @@ When you think about microservice think about loose coupling. It is a method of 
 	Headers exchanges route based on arguments containing headers and optional values. Headers exchanges are very similar to topic exchanges, but it routes based on header values instead of routing keys. A message is considered matching if the value of the header equals the value specified upon binding.
 
 ### Keywords.
-####Producer: Application that sends the messages.
-####Consumer: Application that receives the messages.
-####Queue: Buffer that stores messages.
-####Message: Information that is sent from the producer to a consumer through RabbitMQ.
-####Connection: A connection is a TCP connection between your application and the RabbitMQ broker.
-####Channel: A channel is a virtual connection inside a connection. When you are publishing or consuming messages from a queue - it's all done over a channel.
-####Exchange: Receives messages from producers and pushes them to queues depending on rules defined by the exchange type. To receive messages, a queue needs to be bound to at least one exchange.
-####Binding: A binding is a link between a queue and an exchange.
-####Routing key: The routing key is a key that the exchange looks at to decide how to route the message to queues. The routing key is like an address for the message.
-####AMQP: AMQP (Advanced Message Queuing Protocol) is the protocol used by RabbitMQ for messaging.
-####Users: It is possible to connect to RabbitMQ with a given username and password. Every user can be assigned permissions such as rights to read, write and configure privileges within the instance. Users can also be assigned permissions to specific virtual hosts.
+	####Producer: Application that sends the messages.
+	####Consumer: Application that receives the messages.
+	####Queue: Buffer that stores messages.
+	####Message: Information that is sent from the producer to a consumer through RabbitMQ.
+	####Connection: A connection is a TCP connection between your application and the RabbitMQ broker.
+	####Channel: A channel is a virtual connection inside a connection. When you are publishing or consuming messages from a queue - it's all done over a channel.
+	####Exchange: Receives messages from producers and pushes them to queues depending on rules defined by the exchange type. To receive messages, a queue needs to be bound to at least one exchange.
+	####Binding: A binding is a link between a queue and an exchange.
+	####Routing key: The routing key is a key that the exchange looks at to decide how to route the message to queues. The routing key is like an address for the message.
+	####AMQP: AMQP (Advanced Message Queuing Protocol) is the protocol used by RabbitMQ for messaging.
+	####Users: It is possible to connect to RabbitMQ with a given username and password. Every user can be assigned permissions such as rights to read, write and configure privileges within the instance. Users can also be assigned permissions to specific virtual hosts.
 Vhost, virtual host: A Virtual host provides a way to segregate applications using the same RabbitMQ instance. Different users can have different access privileges to different vhost and queues and exchanges can be created, so they only exist in one vho
 ### Useful Links.
 * https://gist.github.com/samwize/8877226
