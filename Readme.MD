@@ -1,7 +1,7 @@
 <h1 align="center"> The What, Why and How of RabbitMQ</h1>
 
 <div align="center">
-    <img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/1_UnYL-2r54_7AnEwQv0cVxA.png" alt="RabbitMQ Tutorial" width="550" height="200"/>
+    <img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/1_UnYL-2r54_7AnEwQv0cVxA.png" alt="RabbitMQ Tutorial" width="400" height="150"/>
 </div>
 
 
@@ -26,18 +26,22 @@ This repository aims to explain the 'WHAT', 'WHY' and 'HOW' of RabbitMQ and Micr
 1. Useful Links.
 
 ### A bit of a history?
-<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/history.jpg" alt="RabbitMQ Tutorial"/>
+<div align="center">
+<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/history.jpg" alt="RabbitMQ Tutorial" width="450" height="200"/>
+</div>
 Coupling and Cohesion are two fundamental principle in a software design architecture. High Cohesion and low coupling is the expectation. During pre-microservices era, we had SOA which aimed to decrease coupling but in time they were no good. Traditional SOA allows you to make changes to individual components but they must be carefully crafted. It doesn't give you freedom to develop services independently.
 ### What is Microservice?
 <div align="center">
-<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/microservice.png" alt="RabbitMQ Tutorial"/>
+<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/microservice.png" alt="RabbitMQ Tutorial" width="650" height="200"/>
+</br>
 </div>
 When you think about microservice think about loose coupling. It is a method of developing software applications as a suite of independently deployable small modular services in which each service runs a unique process and communicates through a well defined light weight mechanism. These services can be synchronus and asynchronous. One thing you should understand is it is not a silver bullet. It has its own drawback in terms of complexity of testing and deployments.
 ### What is RabbitMQ?
-	#### Fundamentals()
 	<div align="center">
-	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/exchange-main.png" alt="RabbitMQ Tutorial"  width="550" height="200"/>
+	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/exchnage_main.png" alt="RabbitMQ Tutorial" width="270" height="300"/>
+	</br>
 	</div>
+	#### Fundamentals()
 	RabbitMQ is an open source messaging system that allows you to integrate applications together using exchanges and queues. Simply put, it is a software where queues can be defined, applications may connect to the queue and transfer a message onto it.
 	A message can include any kind of information. It could, for example, have information about a process/task that should start on another application (that could be on another server), or it could be just a simple text message. 
 	It is developed in erlang programming language. Also note that RabbitMQ is built on AMQP protocol.
@@ -63,22 +67,26 @@ When you think about microservice think about loose coupling. It is a method of 
 	There are  4 types of exchange
 	i.  Direct Exchange
 	<div align="center">
-	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/direct-exchange.png" alt="RabbitMQ Tutorial"/>
+	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/direct-exchange.png" alt="RabbitMQ Tutorial" width="270" height="300"/>
+	<br>
 	</div>
 	A direct exchange delivers messages to queues based on a message routing key. The routing key is a message attribute added into the message header by the producer. The routing key can be seen as an "address" that the exchange is using to decide how to route the message. A message goes to the queue(s) whose binding key exactly matches the routing key of the message.
 	ii. Fanout Exchange (Broadcasting)
 	<div align="center">
-	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/fanout-exchange.png" alt="RabbitMQ Tutorial"/>
+	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/fanout-exchange.png" alt="RabbitMQ Tutorial" width="270" height="300"/>
+	<br/>
 	</div>
 	The fanout copies and routes a received message to all queues that are bound to it regardless of routing keys or pattern matching as with direct and topic exchanges. Keys provided will simply be ignored.
 	iii.Topic Exchange
 	<div align="center">
-	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/topic-exchange.png" alt="RabbitMQ Tutorial"/>
+	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/topic-exchange.png" alt="RabbitMQ Tutorial" width="270" height="300"/>
+	<br>
 	</div>
 	Topic exchanges route messages to queues based on wildcard matches between the routing key and something called the routing pattern specified by the queue binding. Messages are routed to one or many queues based on a matching between a message routing key and this pattern.
 	iv. Header Exchange
 	<div align="center">
-	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/headers-exchange.png" alt="RabbitMQ Tutorial" />
+	<img src="https://github.com/Shwetabh1/Of-Microservices-and-RabbitMQ/blob/master/images/headers-exchange.png" alt="RabbitMQ Tutorial" width="270" height="300"/>
+	<br>
 	</div>
 	Headers exchanges route based on arguments containing headers and optional values. Headers exchanges are very similar to topic exchanges, but it routes based on header values instead of routing keys. A message is considered matching if the value of the header equals the value specified upon binding.
 
