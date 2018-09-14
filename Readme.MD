@@ -51,13 +51,15 @@ It is developed in erlang programming language. Also note that RabbitMQ is built
 RabbitMQ allows you to scale applications easily. You can develop microservices in different languages, and without knowing whole product schematic. 
 The consumer can take a message of the queue and start the processing at the same time as the producer is queueing up new messages on the queue. The consumer can be on a totally different server than the publisher, or they can be located on the same server. The request can be created in one programming language and handled in another programming language - the two applications will only communicate through the messages they are sending to each other. Due to that, the two applications will have a low coupling between the sender and the receiver.
 <h4> Message Flow in RabbitMQ </h4>
-*Producer, exchange and consumer make up the flow.
-*The producer publishes a message to the exchange. 
-*The exchange receives the message and is now responsible for the routing of the message.
-*A binding has to be set up between the queue and the exchange. In this case, we have bindings to two different queues from the exchange. 
-*The exchange routes the message in to the queues.
-*The messages stay in the queue until they are handled by a consumer.
-*The consumer handles the message.
+<ul>
+	<li>Producer, exchange and consumer make up the flow. </li>
+	<li>The producer publishes a message to the exchange. </li>
+	<li>The exchange receives the message and is now responsible for the routing of the message.</li>
+<li>A binding has to be set up between the queue and the exchange. In this case, we have bindings to two different queues from the exchange.</li>
+	<li>The exchange routes the message in to the queues.</li>
+	<li>The messages stay in the queue until they are handled by a consumer.</li>
+<li>The consumer handles the message.</li>
+	</ul>
 <h4> Setup RabbitMQ </h4>
 Follow the instructions given here: https://www.rabbitmq.com/download.html
 
@@ -95,20 +97,23 @@ Topic exchanges route messages to queues based on wildcard matches between the r
 Headers exchanges route based on arguments containing headers and optional values. Headers exchanges are very similar to topic exchanges, but it routes based on header values instead of routing keys. A message is considered matching if the value of the header equals the value specified upon binding.
 
 ### Keywords.
-	####Producer: Application that sends the messages.
-	####Consumer: Application that receives the messages.
-	####Queue: Buffer that stores messages.
-	####Message: Information that is sent from the producer to a consumer through RabbitMQ.
-	####Connection: A connection is a TCP connection between your application and the RabbitMQ broker.
-	####Channel: A channel is a virtual connection inside a connection. When you are publishing or consuming messages from a queue - it's all done over a channel.
-	####Exchange: Receives messages from producers and pushes them to queues depending on rules defined by the exchange type. To receive messages, a queue needs to be bound to at least one exchange.
-	####Binding: A binding is a link between a queue and an exchange.
-	####Routing key: The routing key is a key that the exchange looks at to decide how to route the message to queues. The routing key is like an address for the message.
-	####AMQP: AMQP (Advanced Message Queuing Protocol) is the protocol used by RabbitMQ for messaging.
-	####Users: It is possible to connect to RabbitMQ with a given username and password. Every user can be assigned permissions such as rights to read, write and configure privileges within the instance. Users can also be assigned permissions to specific virtual hosts.
-	####Vhost, virtual host: A Virtual host provides a way to segregate applications using the same RabbitMQ instance. Different users can have different access privileges to different vhost and queues and exchanges can be created, so they only exist in one vho
+<ul>
+	<li><b>Producer:</b> Application that sends the messages.</li>
+	<li><b>Consumer:</b> Application that receives the messages.</li>
+	<li><b>Queue:</b> Buffer that stores messages.</li>
+	<li><b>Message:</b> Information that is sent from the producer to a consumer through RabbitMQ.</li>
+	<li><b>Connection:</b> A connection is a TCP connection between your application and the RabbitMQ broker.</li>
+	<li><b>Channel:</b> A channel is a virtual connection inside a connection. When you are publishing or consuming messages from a queue - it's all done over a channel.</li>
+	<li><b>Exchange:</b> Receives messages from producers and pushes them to queues depending on rules defined by the exchange type. To receive messages, a queue needs to be bound to at least one exchange.</li>
+	<li><b>Binding:</b> A binding is a link between a queue and an exchange.</li>
+	<li><b>Routing key:</b> The routing key is a key that the exchange looks at to decide how to route the message to queues. The routing key is like an address for the message.</li>
+	<li><b>AMQP:</b>AMQP (Advanced Message Queuing Protocol) is the protocol used by RabbitMQ for messaging.</li>
+	<li><b>Users:</b> It is possible to connect to RabbitMQ with a given username and password. Every user can be assigned permissions such as rights to read, write and configure privileges within the instance. Users can also be assigned permissions to specific virtual hosts.</li>
+	<li><b>Vhost, virtual host:</b> A Virtual host provides a way to segregate applications using the same RabbitMQ instance. 	Different users can have different access privileges to different vhost and queues and exchanges can be created, so they only exist in one vho</li>
+</ul>
 
-### Useful Links.
+<h3> Useful Links.</h3>
+
 * https://gist.github.com/samwize/8877226
 * https://www.youtube.com/watch?v=MLTRHc5dk6s
 * https://gist.github.com/soheilhy/867f76feea7cab4f8a84
